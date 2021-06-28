@@ -1,0 +1,22 @@
+{
+  "name": "repozitar",
+  "version": "1.0.0",
+  "description": "backendovy repozitar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xcicat00/repozitar_backend.git"
+  },
+  "author": "Lada Cicatko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xcicat00/repozitar_backend/issues"
+  },
+  "homepage": "https://github.com/xcicat00/repozitar_backend#readme",
+  "dependencies": {
+    "mongodb": "^3.6.9"
+  }
+}
