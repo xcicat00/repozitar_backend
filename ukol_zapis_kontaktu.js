@@ -4,11 +4,10 @@ var url = "mongodb+srv://xcicat00:karamba81@cluster0.2uczv.mongodb.net/admin?rep
 MongoClient.connect(url,function(err,db){
     if (err) throw err;
     var dbo = db.db("pokus");
-    var kontakt = {Jmeno: "Ladislav", Prijmeni: "Cicatko", Email: "l.cicatko@seznam.cz", Tel:"732560036", Ulice:"Vltavska 13",Mesto:"Brno",PSC: "62500"};
+    var kontakt = { Jmeno: "Ladislav", Prijmeni: "Cicatko", Email: "l.cicatko@seznam.cz", Tel:"732560036", Ulice:"Vltavska 13",Mesto:"Brno",PSC: "62500" };
     dbo.collection("Kontakty").insertOne(kontakt,function(err,res){
         if (err) throw err;
-        console.log("Zapsal jsi kontakt do kolekce Kontakty, Vole!");
+        console.log("Zapsal jsi kontakt do kolekce Kontakty, Vole!");  
         db.close();
     });
-
 });
