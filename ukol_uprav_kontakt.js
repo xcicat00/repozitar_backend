@@ -3,11 +3,12 @@ var url = "mongodb+srv://xcicat00:karamba81@cluster0.2uczv.mongodb.net/admin?rep
 
 MongoClient.connect(url,function(err,db){
     if (err) throw err;
-    var dbo = db.db("pokus");
-    var kontakt = { Jmeno: "Jan", Prijmeni: "Cermak", Email: "jancermal@gmail.cz", Tel:"733455788", Ulice:"Hlavni Trida 14",Mesto:"Benesov",PSC: "49001" };
-    dbo.collection("Kontakty").insertOne(kontakt,function(err,res){
+    var uprav = {Prijmeni: "Cermak"};
+    var modifikace = {$set:{Jmeno: "Janek"}};
+    dbo = db.db("pokus");
+    dbo.collection("Kontakty").updateOne(uprav,modifikace,function(err,res){
         if (err) throw err;
-        console.log("Zapsal jsi kontakt do kolekce Kontakty, Vole!");  
+        console.log("Kontakt byl upraven!");
         db.close();
     });
 });
