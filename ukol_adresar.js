@@ -14,11 +14,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // This responds with "Hello World" on the homepage
-app.get('/', function (req, res) {
+/*app.get('/', function (req, res) {
     console.log("Node vypsal get/");
     res.send('Hello GET');
  })
-
+*/
  
  app.get('/list_user', function (req, res) {
     var MongoClient = require('mongodb').MongoClient;
