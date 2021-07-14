@@ -1,5 +1,6 @@
 //https://stackabuse.com/building-a-rest-api-with-node-and-express
 // app.use(bodyParser.urlencoded({ extended: false }));
+// https://www.youtube.com/watch?v=qZXt1Aom3Cs   (Tutorial na tvorbu ve vue)
 
 
 var express = require('express');
@@ -80,7 +81,7 @@ app.post('/vloz_user/:Jmeno/:Prijmeni/:Email/:Tel/:Ulice/:Mesto/:PSC',  function
     kontakt = { Jmeno: jmeno, Prijmeni: prijmeni, Email: email, Tel: tel, Ulice: ulice, Mesto: mesto, PSC: psc };
     dbo.collection("Kontakty").insertOne(kontakt,function(err,res){
         if (err) throw err;
-        console.log("Zapsal jsi kontakt do kolekce Kontakty, Vole!");  
+        console.log("Zapsal jsi kontakt do kolekce Kontakty!");  
         db.close();
     });
   });  
